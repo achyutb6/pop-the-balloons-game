@@ -132,7 +132,7 @@ public class GameView extends View {
                     //if 10 balloons popped the add 10s to the timer
 
                     balloons.remove(touchedBalloon);
-                    if (timer != null && poppedBalloonCount % 10 == 0) {
+                    if (timer != null && poppedBalloonCount % 10 == 0 && poppedBalloonCount != 0) {
                         timer.cancel();
                         startTimer(currentTime + 10000);
                         timerText.setText("+10s");
